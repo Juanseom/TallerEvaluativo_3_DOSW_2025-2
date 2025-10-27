@@ -105,15 +105,49 @@ El backend sigue la **arquitectura Modelo–Vista–Controlador (MVC)**. La estr
 
 ---
 
-## 📊 Diagramas del sistema
+# 🌳 Manejo de Estrategia de versionamiento y branches
 
-Para la documentación y análisis del proyecto se generaron los siguientes diagramas UML:
 
-- ### **Diagrama de Componentes Especifico**
-  ![D.Componentes](docs/uml/Diagrama%20de%20Componentes%20Especifico.png)
+## Estrategia de Ramas (Git Flow)
 
-- ### **Diagrama de Clases**
-  ![D.Clases](docs/uml/Diagrama%20de%20Clases.png)
+![GitFlow.jpg](docs/imagenes/GitFlow.jpg)
+
+## Ramas y propósito
+- Manejaremos GitFlow, el modelo de ramificación para el control de versiones de Git
+
+### `main`
+- **Propósito:** rama **estable** con la versión final (lista para demo/producción).
+- **Reglas:**
+    - Solo recibe merges desde `release/*` y `hotfix/*`.
+    - Cada merge a `main` debe crear un **tag** SemVer (`vX.Y.Z`).
+    - Rama **protegida**: PR obligatorio, 1–2 aprobaciones, checks de CI en verde.
+
+### `develop`
+- **Propósito:** integración continua de trabajo; base de nuevas funcionalidades.
+- **Reglas:**
+    - Recibe merges desde `feature/*` y también desde `release/*` al finalizar un release.
+    - Rama **protegida** similar a `main`.
+
+### `feature/*`
+- **Propósito:** desarrollo de una funcionalidad, refactor o spike.
+- **Base:** `develop`.
+- **Cierre:** se fusiona a `develop` mediante **PR**
+
+
+### `release/*`
+- **Propósito:** congelar cambios para estabilizar pruebas, textos y versiones previas al deploy.
+- **Base:** `develop`.
+- **Cierre:** merge a `main` (crear **tag** `vX.Y.Z`) **y** merge de vuelta a `develop`.
+- **Ejemplo de nombre:**  
+  `release/1.3.0`
+
+### `hotfix/*`
+- **Propósito:** corregir un bug **crítico** detectado en `main`.
+- **Base:** `main`.
+- **Cierre:** merge a `main` (crear **tag** de **PATCH**) **y** merge a `develop` para mantener paridad.
+- **Ejemplos de nombre:**  
+  `hotfix/fix-blank-screen`, `hotfix/css-broken-header`
+
 
 ---
 
