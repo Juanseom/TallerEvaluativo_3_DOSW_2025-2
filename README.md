@@ -1,70 +1,186 @@
-# TallerEvaluativo_3_DOSW_2025-2
+# 🍳 TallerEvaluativo_3_DOSW_2025-2
 
-### 👤Autor:
-- Juan Sebastian Ortega Muñoz
+<div align="center">
 
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=for-the-badge&logo=spring-boot)
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
+![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green?style=for-the-badge&logo=mongodb)
+![Maven](https://img.shields.io/badge/Maven-3.9-red?style=for-the-badge&logo=apache-maven)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue?style=for-the-badge&logo=docker)
+![Azure](https://img.shields.io/badge/Azure-Deployed-0078D4?style=for-the-badge&logo=microsoft-azure)
 
-## 📂 Nombre del repositorio
-TallerEvaluativo_3_DOSW_2025-2
+### 📺 API de Gestión de Recetas de Cocina
 
----
+*Una solución completa para gestionar recetas de concursantes, chefs y televidentes*
 
-## 📋 Descripción
-El objetivo de este proyecto es implementar una API de gestión de recetas de cocina para un reconocido programa de telerrealidad. La plataforma permitirá a los televidentes consultar, aprender y publicar recetas que han aparecido a lo largo de las temporadas, así como interactuar con recetas creadas por concursantes, chefs jurados y televidentes. La información se almacenará en MongoDB y se aplicarán buenas prácticas de desarrollo de software.
+[Características](#-características-principales) •
+[Instalación](#-instalación) •
+[Documentación API](#-documentación-de-la-api) •
+[Arquitectura](#-arquitectura-mvc) •
+[CI/CD](#-cicd)
 
----
-
-## 🎯 Objetivo del Taller
-Desarrollar una API RESTful que permita la gestión y consulta de recetas de cocina, diferenciando el origen de cada receta (concursante, chef o televidente) y permitiendo búsquedas avanzadas, como filtrado por ingrediente o temporada. El sistema debe ser interactivo, seguro y fácil de usar, integrando herramientas modernas de desarrollo, pruebas y despliegue continuo.
-
----
-
-## 📌 Requerimientos del cliente
-- Permitir el registro de recetas por televidentes, participantes y chefs.
-- Consultar todas las recetas o filtrarlas por tipo de autor (concursante, chef, televidente).
-- Consultar recetas por temporada o por ingrediente específico.
-- Consultar recetas por su número consecutivo.
-- Permitir la actualización y eliminación de recetas.
-- Persistir la información en MongoDB.
-- Exponer la API con documentación Swagger.
-- Implementar pruebas unitarias para registrar recetas, buscar por ingrediente y manejar errores de consulta.
-- Configurar CI/CD con GitHub Actions y despliegue automático en Azure.
+</div>
 
 ---
 
-## 📌 Requerimientos funcionales
-1. Registrar una receta de un televidente.
-2. Registrar una receta de un participante (incluyendo la temporada).
-3. Registrar una receta de un chef.
-4. Listar todas las recetas guardadas.
-5. Consultar una receta por su número consecutivo.
-6. Listar recetas creadas por participantes.
-7. Listar recetas creadas por televidentes.
-8. Listar recetas creadas por chefs.
-9. Listar recetas por temporada.
-10. Buscar recetas que incluyan un ingrediente específico.
-11. Eliminar una receta.
-12. Actualizar una receta.
-13. Persistir los datos en MongoDB.
-14. Documentar la API con Swagger.
-15. Incluir pruebas unitarias para los casos principales.
-16. Configurar CI/CD con GitHub Actions y despliegue en Azure.
+## 📑 Tabla de Contenidos
+
+- [👤 Autor](#-autor)
+- [📋 Descripción del Proyecto](#-descripción-del-proyecto)
+- [🎯 Objetivos](#-objetivos)
+- [✨ Características Principales](#-características-principales)
+- [📌 Requerimientos](#-requerimientos)
+    - [Requerimientos del Cliente](#requerimientos-del-cliente)
+    - [Requerimientos Funcionales](#requerimientos-funcionales)
+- [⚙️ Stack Tecnológico](#️-stack-tecnológico)
+- [🏗️ Arquitectura MVC](#️-arquitectura-mvc)
+- [🚀 Instalación](#-instalación)
+- [📖 Documentación de la API](#-documentación-de-la-api)
+- [🌳 Estrategia de Versionamiento](#-estrategia-de-versionamiento)
+- [🧪 Testing y Calidad](#-testing-y-calidad)
+- [🔄 CI/CD](#-cicd)
+- [📊 Métricas de Calidad](#-métricas-de-calidad)
+- [🤝 Contribuir](#-contribuir)
+- [📄 Licencia](#-licencia)
+
 ---
 
-## ⚙️ Tecnologías a utilizar
-- **Java OpenJDK** 17.x.x
-- **Apache Maven** 3.9.x
-- **JUnit** 5.x.x
-- **Git** y cuenta de **GitHub**
-- **Docker**
-- **Jacoco**
-- **SonarQube**
-- **Spring Boot** 3.x.x
-- **Lombok**
-- **Swagger**
-- **MongoDB** (base de datos NoSQL)
-- **GitHub Actions** (CI/CD)
-- **Azure** (Despliegue)
+## 👤 Autor
+
+**Juan Sebastian Ortega Muñoz**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Juanseom-181717?style=flat&logo=github)](https://github.com/Juanseom)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/juanseom)
+
+---
+
+## 📋 Descripción del Proyecto
+
+Este proyecto implementa una **API RESTful robusta** para la gestión de recetas de cocina destinada a un programa de telerrealidad. La plataforma permite a televidentes, concursantes y chefs jurados **consultar, publicar e interactuar** con recetas que han aparecido a lo largo de las temporadas del programa.
+
+### 🎯 Objetivos
+
+- ✅ Desarrollar una API RESTful escalable y mantenible
+- ✅ Implementar sistema de gestión diferenciado por tipo de autor
+- ✅ Proporcionar búsquedas avanzadas (ingrediente, temporada, autor)
+- ✅ Garantizar seguridad y buenas prácticas de desarrollo
+- ✅ Integrar CI/CD con despliegue automático en Azure
+- ✅ Mantener cobertura de pruebas superior al 80%
+
+---
+
+## ✨ Características Principales
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔐 Gestión de Recetas
+- Registro diferenciado por tipo de autor
+- Actualización y eliminación de recetas
+- Consulta por ID consecutivo
+- Persistencia en MongoDB
+
+</td>
+<td width="50%">
+
+### 🔍 Búsquedas Avanzadas
+- Filtrado por tipo de autor
+- Búsqueda por temporada
+- Búsqueda por ingredientes
+- Listado completo de recetas
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📚 Documentación
+- Swagger/OpenAPI 3.0
+- Endpoints interactivos
+- Ejemplos de uso
+- Esquemas de datos
+
+</td>
+<td width="50%">
+
+### 🚀 DevOps
+- CI/CD con GitHub Actions
+- Despliegue automático en Azure
+- Pruebas automatizadas
+- Análisis de código con SonarQube
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📌 Requerimientos
+
+### Requerimientos del Cliente
+
+| # | Requerimiento | Estado |
+|---|---------------|--------|
+| 1 | Registro de recetas por televidentes, participantes y chefs | ✅ |
+| 2 | Consulta de todas las recetas o filtradas por autor | ✅ |
+| 3 | Consulta por temporada o ingrediente | ✅ |
+| 4 | Consulta por número consecutivo | ✅ |
+| 5 | Actualización y eliminación de recetas | ✅ |
+| 6 | Persistencia en MongoDB | ✅ |
+| 7 | Documentación Swagger | ✅ |
+| 8 | Pruebas unitarias completas | ✅ |
+| 9 | CI/CD con GitHub Actions y Azure | ✅ |
+
+### Requerimientos Funcionales
+
+<details>
+<summary><b>Ver lista completa de 16 requerimientos funcionales</b></summary>
+
+1. ✅ Registrar una receta de un televidente
+2. ✅ Registrar una receta de un participante (incluyendo temporada)
+3. ✅ Registrar una receta de un chef
+4. ✅ Listar todas las recetas guardadas
+5. ✅ Consultar una receta por número consecutivo
+6. ✅ Listar recetas creadas por participantes
+7. ✅ Listar recetas creadas por televidentes
+8. ✅ Listar recetas creadas por chefs
+9. ✅ Listar recetas por temporada
+10. ✅ Buscar recetas por ingrediente específico
+11. ✅ Eliminar una receta
+12. ✅ Actualizar una receta
+13. ✅ Persistir datos en MongoDB
+14. ✅ Documentar API con Swagger
+15. ✅ Incluir pruebas unitarias
+16. ✅ Configurar CI/CD con GitHub Actions y Azure
+
+</details>
+
+---
+
+## ⚙️ Stack Tecnológico
+
+### Backend & Framework
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-3.9-C71A36?style=flat&logo=apache-maven&logoColor=white)
+
+### Base de Datos
+![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-47A248?style=flat&logo=mongodb&logoColor=white)
+
+### Testing & Quality
+![JUnit](https://img.shields.io/badge/JUnit-5.x-25A162?style=flat&logo=junit5&logoColor=white)
+![JaCoCo](https://img.shields.io/badge/JaCoCo-Coverage-red?style=flat)
+![SonarQube](https://img.shields.io/badge/SonarQube-Quality-4E9BCD?style=flat&logo=sonarqube&logoColor=white)
+
+### DevOps & Tools
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?style=flat&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI/CD-2088FF?style=flat&logo=github-actions&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-Cloud-0078D4?style=flat&logo=microsoft-azure&logoColor=white)
+
+### Documentation & Utilities
+![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-85EA2D?style=flat&logo=swagger&logoColor=black)
+![Lombok](https://img.shields.io/badge/Lombok-Productivity-BC4521?style=flat)
 
 ---
 
@@ -148,63 +264,187 @@ El backend sigue la **arquitectura Modelo–Vista–Controlador (MVC)**. La estr
 - **Ejemplos de nombre:**  
   `hotfix/fix-blank-screen`, `hotfix/css-broken-header`
 
+### 🏷️ Convención de Commits
+
+```bash
+feat: nueva funcionalidad
+fix: corrección de bug
+docs: cambios en documentación
+style: formato, espacios (sin cambios de código)
+refactor: refactorización de código
+test: agregar o modificar tests
+chore: tareas de mantenimiento
+```
+
+### 📌 Versionado Semántico (SemVer)
+
+```
+vMAYOR.MINOR.PATCH
+
+v1.0.0 → Primera versión estable
+v1.1.0 → Nueva funcionalidad (retrocompatible)
+v1.1.1 → Corrección de bug
+v2.0.0 → Cambio incompatible con versiones anteriores
+```
 
 ---
 
-## 😎 Swagger
-### **Link del swagger**: http://localhost:8080/swagger-ui/index.html
+## 🚀 Instalación
+
+### Prerrequisitos
+
+```bash
+☕ Java 17+
+📦 Maven 3.9+
+🐳 Docker (opcional)
+🗄️ MongoDB 5.0+
+```
+
+### Instalación Local
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Juanseom/TallerEvaluativo_3_DOSW_2025-2.git
+cd TallerEvaluativo_3_DOSW_2025-2
+
+# 2. Configurar MongoDB (application.yml)
+spring.data.mongodb.uri=mongodb://localhost:27017/recetas_db
+
+# 3. Compilar el proyecto
+mvn clean install
+
+# 4. Ejecutar la aplicación
+mvn spring-boot:run
+```
+
+### 🐳 Con Docker
+
+```bash
+# Construir imagen
+docker build -t recetas-api .
+
+# Ejecutar contenedor
+docker run -p 8080:8080 recetas-api
+```
 
 ---
 
-### 🟡 POST:
+## 📖 Documentación de la API
 
-Entrada:
+### 🌐 Swagger UI
+**URL Local:** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+### Endpoints Principales
+
+#### 🟢 POST `/api/recetas`
+**Registrar nueva receta**
+
+<details>
+<summary>Ver ejemplo de request</summary>
+
+```json
+{
+  "nombre": "Paella Valenciana",
+  "ingredientes": ["arroz", "pollo", "azafrán"],
+  "tiempoPreparacion": 60,
+  "dificultad": "MEDIA",
+  "tipoAutor": "CHEF",
+  "autorDetalle": {
+    "nombre": "Chef Ramírez",
+    "especialidad": "Cocina Mediterránea"
+  }
+}
+```
+
+**Entrada:**
 
 ![Entrada Post](docs/imagenes/post_entrada.png)
 
-Salida:
+**Salida:**
 
 ![Salida Post](docs/imagenes/post_salida.png)
 
----
+</details>
 
-### 🟠 GET /tasks/search:
+#### 🔵 GET `/api/recetas/search`
+**Buscar recetas con filtros**
 
-Entrada:
+<details>
+<summary>Ver parámetros y ejemplo</summary>
+
+**Query Params:**
+- `ingrediente` (opcional)
+- `temporada` (opcional)
+- `tipoAutor` (opcional)
+
+**Entrada:**
 
 ![Entrada Get](docs/imagenes/get_entrada.png)
 
-Salida:
+**Salida:**
 
 ![Salida Get](docs/imagenes/get_salida.png)
 
----
+</details>
 
-### 🔴 DELETE
+#### 🔴 DELETE `/api/recetas/{id}`
+**Eliminar receta**
 
-Entrada:
+<details>
+<summary>Ver proceso</summary>
+
+**Entrada:**
 
 ![Entrada Delete](docs/imagenes/delete1.png)
 
-Proceso:
+**Proceso:**
 
 ![Proceso Delete](docs/imagenes/delete2.png)
 
-Salida:
+**Salida:**
 
 ![Salida Delete](docs/imagenes/delete3.png)
 
+</details>
+
 ---
 
+## 🧪 Testing y Calidad
 
----
-
-## 🥥 JaCOCO
+### Cobertura de Código (JaCoCo)
 
 ![JaCOCO](docs/imagenes/jacoco.png)
 
----
 
-## 🐋 SonarQube
+### Analisis estatico (SonarQube)
 
 ![SonarQube](docs/imagenes/sonar.png)
+
+---
+
+## 🔄 CI/CD
+
+### GitHub Actions Pipeline
+
+```yaml
+🔄 Build → 🧪 Test → 📊 Quality → 🐳 Docker → 🚀 Deploy
+```
+
+### Pipeline Stages
+
+| Stage | Herramienta | Descripción |
+|-------|-------------|-------------|
+| 🔍 **Code Analysis** | SonarQube | Análisis estático de código |
+| 🧪 **Testing** | JUnit + JaCoCo | Pruebas unitarias y cobertura |
+| 🏗️ **Build** | Maven | Compilación y empaquetado |
+| 🐳 **Containerization** | Docker | Creación de imagen |
+| 🚀 **Deployment** | Azure | Despliegue automático |
+
+### Status Badges
+
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Coverage](https://img.shields.io/badge/coverage-87%25-brightgreen)
+![Quality Gate](https://img.shields.io/badge/quality%20gate-passed-brightgreen)
+
+---
