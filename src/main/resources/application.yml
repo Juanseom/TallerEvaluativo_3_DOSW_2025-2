@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@clusterrecetas.c1zs8sz.mongodb.net/recetas_db?retryWrites=true&w=majority&appName=ClusterRecetas
+
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.data.mongodb.core: DEBUG

@@ -34,5 +34,5 @@ public class RecetaRequestDTO {
     private TipoChef tipoAutor;
 
     @Schema(description = "Temporada en la que se presentó la receta", example = "3")
-    private int temporada;
+    private Integer temporada;
 }
