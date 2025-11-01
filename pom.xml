@@ -28,13 +28,13 @@
         <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <sonar.coverage.exclusions>src//configurators/*</sonar.coverage.exclusions>
 
-        <properties>
-            <sonar.organization>juanseom</sonar.organization>
-            <sonar.projectKey>Juanseom_TallerEvaluativo_3_DOSW_2025-2</sonar.projectKey>
-            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-            <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-            <sonar.coverage.exclusions>**/configurators/**,**/configs/**</sonar.coverage.exclusions>
-        </properties>
+
+        <sonar.organization>juanseom</sonar.organization>
+        <sonar.projectKey>Juanseom_TallerEvaluativo_3_DOSW_2025-2</sonar.projectKey>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.exclusions>**/configurators/**,**/configs/**</sonar.coverage.exclusions>
+
     </properties>
 
     <dependencyManagement>
