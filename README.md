@@ -409,6 +409,7 @@ docker run -p 8080:8080 recetas-api
 | 🐳 **Containerization** | Docker | Creación de imagen |
 | 🚀 **Deployment** | Azure | Despliegue automático |
 
+**URL Backend desplegado:** [https://recetas-api.azurewebsites.net/swagger-ui/index.html]
 ### Status Badges
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
