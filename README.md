@@ -50,7 +50,6 @@
 **Juan Sebastian Ortega Muñoz**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Juanseom-181717?style=flat&logo=github)](https://github.com/Juanseom)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/juanseom)
 
 ---
 
@@ -60,12 +59,12 @@ Este proyecto implementa una **API RESTful robusta** para la gestión de recetas
 
 ### 🎯 Objetivos
 
-- ✅ Desarrollar una API RESTful escalable y mantenible
-- ✅ Implementar sistema de gestión diferenciado por tipo de autor
-- ✅ Proporcionar búsquedas avanzadas (ingrediente, temporada, autor)
-- ✅ Garantizar seguridad y buenas prácticas de desarrollo
-- ✅ Integrar CI/CD con despliegue automático en Azure
-- ✅ Mantener cobertura de pruebas superior al 80%
+- Desarrollar una API RESTful escalable y mantenible
+- Implementar sistema de gestión diferenciado por tipo de autor
+- Proporcionar búsquedas avanzadas (ingrediente, temporada, autor)
+- Garantizar seguridad y buenas prácticas de desarrollo
+- Integrar CI/CD con despliegue automático en Azure
+- Mantener cobertura de pruebas superior al 80%
 
 ---
 
@@ -339,23 +338,6 @@ docker run -p 8080:8080 recetas-api
 #### 🟢 POST `/api/recetas`
 **Registrar nueva receta**
 
-<details>
-<summary>Ver ejemplo de request</summary>
-
-```json
-{
-  "nombre": "Paella Valenciana",
-  "ingredientes": ["arroz", "pollo", "azafrán"],
-  "tiempoPreparacion": 60,
-  "dificultad": "MEDIA",
-  "tipoAutor": "CHEF",
-  "autorDetalle": {
-    "nombre": "Chef Ramírez",
-    "especialidad": "Cocina Mediterránea"
-  }
-}
-```
-
 **Entrada:**
 
 ![Entrada Post](docs/imagenes/post_entrada.png)
@@ -364,13 +346,10 @@ docker run -p 8080:8080 recetas-api
 
 ![Salida Post](docs/imagenes/post_salida.png)
 
-</details>
+---
 
 #### 🔵 GET `/api/recetas/search`
 **Buscar recetas con filtros**
-
-<details>
-<summary>Ver parámetros y ejemplo</summary>
 
 **Query Params:**
 - `ingrediente` (opcional)
@@ -385,27 +364,18 @@ docker run -p 8080:8080 recetas-api
 
 ![Salida Get](docs/imagenes/get_salida.png)
 
-</details>
+---
 
-#### 🔴 DELETE `/api/recetas/{id}`
+#### 🔴 DELETE `/api/recetas/{titulo}`
 **Eliminar receta**
-
-<details>
-<summary>Ver proceso</summary>
 
 **Entrada:**
 
 ![Entrada Delete](docs/imagenes/delete1.png)
 
-**Proceso:**
-
-![Proceso Delete](docs/imagenes/delete2.png)
-
 **Salida:**
 
-![Salida Delete](docs/imagenes/delete3.png)
-
-</details>
+![Proceso Delete](docs/imagenes/delete2.png)
 
 ---
 
@@ -415,8 +385,7 @@ docker run -p 8080:8080 recetas-api
 
 ![JaCOCO](docs/imagenes/jacoco.png)
 
-
-### Analisis estatico (SonarQube)
+### Análisis Estático (SonarQube)
 
 ![SonarQube](docs/imagenes/sonar.png)
 
@@ -426,7 +395,7 @@ docker run -p 8080:8080 recetas-api
 
 ### GitHub Actions Pipeline
 
-```yaml
+```
 🔄 Build → 🧪 Test → 📊 Quality → 🐳 Docker → 🚀 Deploy
 ```
 
@@ -444,7 +413,6 @@ docker run -p 8080:8080 recetas-api
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
-![Coverage](https://img.shields.io/badge/coverage-87%25-brightgreen)
 ![Quality Gate](https://img.shields.io/badge/quality%20gate-passed-brightgreen)
 
 ---
