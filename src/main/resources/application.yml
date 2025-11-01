@@ -1,12 +1,26 @@
 spring:
+  application:
+    name: recetas-api
+
   data:
     mongodb:
-      uri: mongodb+srv://admin:admin@clusterrecetas.c1zs8sz.mongodb.net/recetas_db?retryWrites=true&w=majority&appName=ClusterRecetas
-
+      uri: ${MONGODB_URI:mongodb+srv://admin:admin@clusterrecetas.c1zs8sz.mongodb.net/recetas_db?retryWrites=true&w=majority&appName=ClusterRecetas}
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 logging:
   level:
-    org.springframework.data.mongodb.core: DEBUG
+    root: INFO
+    org.springframework.data.mongodb.core: ${LOG_LEVEL:INFO}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+logging:
+  level:
+    root: WARN
+    org.springframework.data.mongodb.core: INFO
