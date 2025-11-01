@@ -8,7 +8,7 @@ on:
 
 env:
   JAVA_VERSION: '17'
-  DOCKER_IMAGE: juanseom/recetas-api
+  DOCKER_IMAGE: juanseortega/recetas-api
   AZURE_WEBAPP_NAME: recetas-api
 
 jobs:
